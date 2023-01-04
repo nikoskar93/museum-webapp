@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 12vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    background-color: rgb(109, 230, 189);
+    height: 70%;
+    width: 20%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ header > nav > .nav-burger {
+    width: 120px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+}
+
+.nav-burger::before,
+.nav-burger::after {
+    background-color: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.nav-burger::before {
+    top: 20px;
+}
+
+.nav-burger::after {
+    top: -20px;
+} 
+
+header > .logo {
+    width: 40vw;
+    height: 80%;
+    border: 1px solid black;
+    background-image: url(./img/art.png);
+    background-size: 40vw 100%;
+    background-repeat: no-repeat;
+}
+
+.account{
+    height: 100%;
+    width: 20vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account > a > .profile-pic {
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-image: url(./img/persona.png);
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+}
+
+main {
+    height: 100%;
+    width: 100vw;
+    background-color: rgb(243, 243, 231);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.top-section {
+    background-color: beige;
+    width: 100%;
+    min-height: 300px;
+    flex: 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.main-txt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: blueviolet;
+}
+
+.frame-top {
+    width: 100%;
+    min-height: 25vh;
+    border: 2px solid rgb(223, 202, 202);
+    box-shadow: 3px 3px 5px rgb(119, 118, 118);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.frame-top > a {
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    width: 95%;
+    align-self: center;
+    height: 50px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-red {
+    background-color: rgb(170, 67, 67);
+}
+
+.btn-blue {
+    background-color: rgb(117, 144, 202);
+}
+
+.bottom-section {
+    background-color: white;
+    width: 100%;
+    flex: 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.frame-bottom {
+    border: 2px solid rgb(223, 202, 202);
+    min-height: 35vh;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(119, 118, 118);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.recommended-pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 98%;
+}
+
+.recommended-pics .pics-top {
+    display: flex;
+    justify-content: center;
+    flex: 1 50%;
+    margin-bottom: 10px;
+
+}
+
+.recommended-pics .pics-bottom {
+    display: flex;
+    justify-content: space-around;
+    flex: 1 50%;
+}
+
+.pics-top img {
+    width: 98%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.pics-bottom img {
+    width: 48%;
+}
+
+.recommended-pics > img:first-child {
+    width: 99%;
+    height: 45%;
+    margin-top: 10px;
+}
+
+.recommended-pics > img:nth-child(2),
+.recommended-pics > img:last-of-type {
+    width: 49%;
+    height: 45%;
+}
+
+.recommended-dots > img {
+    width: 25vw;
+    height: 8vh;
+}
+
+.schedule .frame-top {
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.schedule select {
+    width: 30vw;
+    background-color: rgb(206, 202, 202);
+}
+
+.city select {
+    margin-left: 40px;
+}
+
+.gallery select {
+    margin-left: 20px;
+}
+
+.country select {
+    margin-left: 15px;
+}
+
+.schedule .bottom-section {
+    width: 100%;
+}
+
+.schedule .frame-bottom {
+    min-height: 30vh;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.schedule .frame-bottom > a {
+    width: 100%;
+    text-align: center;
+}
+
+.purchase .frame-top {
+    min-height: 35vh;
+}
+
+.smaller-txt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: blueviolet;
+}
+
+.purchase .frame-top .picture{
+    width: 90%;
+    min-height: 30vh;
+    border: 1px solid black;
+    background-image: url(./img/artV1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.purchase .bottom-section {
+    width: 100%;
+}
+
+.purchase .bottom-section a {
+    width: 100%;
+    text-align: center;
+}
+
+.purchase .bottom-section .btn {
+    width: 40%;
+    height: 40px;
+}
+
+.purchase .frame-bottom {
+    min-height: 35vh;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+form label {
+    margin-left: -15px;
+}
+
+.small-txt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 520;
+    color: blueviolet;
+}
+
+.purchase .frame-bottom form input:not(#submit) {
+    background-color: rgb(215, 221, 221);
+    margin-left: 10px;
+}
+
+.purchase .frame-bottom form .btn-blue {
+    width: 47%;
+    height: 40px;
+}
+
+.purchase .frame-bottom form input:not(#card-save):not(.btn) {
+    width: 50%;
+}
+
+.purchase .frame-bottom form .save-card {
+    align-self: flex-end;
+}
+
+.purchase .frame-bottom .margin-bottom {
+    margin-bottom: 15px;
+}
+
+.verification {
+    background-color: white;
+}
+
+.verification .top-section .smaller-txt {
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.verification .top-section .verify-txt {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: brown;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.verification .bottom-section .smaller-txt {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.verification .bottom-section a {
+    width: 60%;
+    text-align: center;
+    margin: 20px;
+}
+
+.tour {
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tour .frame-top {
+    width: 90%;
+    min-height: 40vh;
+}
+
+.tour .frame-top .btn-start {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: 300;
+    background-image: url(./img/button-start.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 220px 215px;
+    cursor: pointer;
+}
+
+.tour .home-btn {
+    width: 80%;
+    text-align: center;
+}
+
+.tour .download-btn {
+    width: 80%;
+    text-align: center;
+}
+
+.newsletter {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.signup-form form input,
+.signup-form form select {
+    background-color: rgb(215, 221, 221);
+    margin-left: 10px;
+    width: 50%;
+}
+
+.frame-top .signup-form {
+    width: 80%;
+    height: 100%;
+}
+
+.frame-top .signup-form form {
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.my-account {
+    margin-top: -30px;
+}
+
+.favourites {
+    height: 100vh;
+    background-color: white;
+}
+
+.favourites .main-txt {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.favourites .frame-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 80%;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.favourites .home-btn {
+    width: 60%;
+}
+
+.unfinished {
+    width: 90%;
+    height: 30%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/artv2.jpg);
+}
+
+.unfinished section {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.favourites .dots {
+    height: 5%;
+    width: 20%;
+    background-image: url(./img/slider-dots.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.favourites .history {
+    margin-top: 10px;
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.history-top {
+    display: flex;
+    justify-content: center;
+    flex: 1 50%;
+    margin-bottom: 10px;
+}
+
+.history-bottom {
+    display: flex;
+    justify-content: space-around;
+    flex: 1 50%;
+    z-index: 1;
+}
+
+.history-top img {
+    width: 99%;
+    height: 100%;
+}
+
+.history-bottom img {
+    width: 48%;
+    height: 100%;
+}
+
+.favourites .dots:last-of-type {
+    margin-top: 5px;
+}
+
+.favourites .btn {
+    margin-bottom: 20px;
+}
+
+.download .frame-top .btn {
+    width: 50%;
+}
+
+.download .frame-bottom {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.download .frame-bottom a {
+    width: 80%;
+}
